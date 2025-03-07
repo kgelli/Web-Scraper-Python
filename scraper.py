@@ -46,7 +46,7 @@ def save_to_db(quotes):
     conn.commit()
     cursor.close()
     conn.close()
-    print("Data saved to MySQL..!!!")
+    print("Data saved to MySQL server..!!!")
 
 if __name__ == "__main__":
     wait_for_db()
