@@ -18,7 +18,7 @@ def wait_for_db():
             print("Connected to MySQL Server!")
             break
         except mysql.connector.Error:
-            print("Waiting for MySQL to start...")
+            print("Waiting for MySQL to start...!!!")
             time.sleep(3)
 
 def scrape_quotes():
@@ -26,7 +26,7 @@ def scrape_quotes():
     response = requests.get(URL)
 
     if response.status_code != 200:
-        print("Failed to fetch webpage")
+        print("Failed to fetch webpage..")
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")
@@ -46,7 +46,7 @@ def save_to_db(quotes):
     conn.commit()
     cursor.close()
     conn.close()
-    print("Data saved to MySQL!")
+    print("Data saved to MySQL..!!!")
 
 if __name__ == "__main__":
     wait_for_db()
