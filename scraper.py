@@ -15,7 +15,7 @@ def wait_for_db():
         try:
             conn = mysql.connector.connect(**DB_CONFIG)
             conn.close()
-            print("Connected to MySQL!")
+            print("Connected to MySQL Server!")
             break
         except mysql.connector.Error:
             print("Waiting for MySQL to start...")
